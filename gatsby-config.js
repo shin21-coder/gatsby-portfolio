@@ -42,6 +42,34 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
+
+    // {
+    //   resolve: `@contentful/gatsby-transformer-contentful-richtext`,
+    //   options: {
+    //     renderOptions: {
+    //       renderNode: {
+    //         [BLOCKS.EMBEDDED_ASSET]: node => {
+    //           return `<img src="${node.data.target.fields.file['en-US'].url}" />`
+    //         }
+    //       },
+    //     },
+    //   },
+    // },
   ],
   /* Your site config here */
 }
