@@ -58,18 +58,20 @@ module.exports = {
       },
     },
 
-    // {
-    //   resolve: `@contentful/gatsby-transformer-contentful-richtext`,
-    //   options: {
-    //     renderOptions: {
-    //       renderNode: {
-    //         [BLOCKS.EMBEDDED_ASSET]: node => {
-    //           return `<img src="${node.data.target.fields.file['en-US'].url}" />`
-    //         }
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          }
+        ]
+      },
+    }
   ],
   /* Your site config here */
 }
