@@ -42,27 +42,28 @@ const options = {
 
 
 
-const Post = (props) => {
-  // console.log(props);
+const Post = ({data}) => {
 
-  // const option = {
-  //   renderNode: {
-  //     [INLINES.HYPERLINK]: (node) => {
-
-  //       if((node.data.uri).includes("player.vimeo.com/video")){
-  //         return <IframeContainer><iframe title="Unique Title 001" src={node.data.uri} frameBorder="0" allowFullScreen></iframe></IframeContainer>
-  //       } else if((node.data.uri).includes("youtube.com/embed")) {
-  //         return <IframeContainer><iframe title="Unique Title 002" src={node.data.uri} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowFullScreen></iframe></IframeContainer>
-  //       }
-  //     }
-  //   }
-  // }
-  // console.log(option);
+  const { contentfulHome: { content,image } } = data
+  
+  console.log(image);
 
 
  return(
   <div>
-  {documentToReactComponents(props.data.contentfulHome.content.json, options)}
+     {documentToReactComponents(content.json, options)}
+     {data.contentfulHome.title}
+    
+     <article>
+
+     <Image fixed={image.fixed} alt="aaa" />
+
+     </article>
+
+
+
+     
+     
   </div>
  )
 }
@@ -72,6 +73,13 @@ export default Post
 export const query = graphql`
   {
     contentfulHome {
+      title
+      
+        image {
+          fixed(width:300) {
+            ...GatsbyContentfulFixed
+          }
+        }
       content {
         json
       }
