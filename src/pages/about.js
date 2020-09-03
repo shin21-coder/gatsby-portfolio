@@ -27,7 +27,7 @@ const options = {
       return (
         <Image title={node.data.target.fields.title["en-US"]} fluid={fluid} />
       );
-    
+
     },
     //こっちがリッチテキスト内の動画を上手く表示させるやつ
     [INLINES.HYPERLINK]: (node) => {
@@ -58,6 +58,28 @@ const useStyles = makeStyles((theme) => ({
     // textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  skilltheme: {
+    color: 'white',
+    position: 'absolute',
+    top: '25%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    width: '100px',
+    textAlign: 'center',
+  },
+  circle: {
+    width: 80,
+    height: 80,
+    borderRadius: '50%',
+    backgroundColor: 'white',
+    textAlign: 'center',
+    lineHeight: '80px',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    color: 'black'
+  },
 }));
 
 
@@ -66,32 +88,35 @@ const About = ({ data }) => {
 
 
 
-  const { contentfulHome: { content,image } } = data
-  
+  const { contentfulHome: { content, image } } = data
+
 
 
   return (<Wrapper>
     <Layout>
-    <h3 className="center">About me</h3>
-   
-    
-    
-    <div className={classes.root}>
-     <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}><Image fixed={image.fixed} alt="aaa" /></Paper>
+      <div className={classes.skilltheme}>
+        <div className={classes.circle}>About</div>
+      </div>
+      <h3 className="center">About me</h3>
+
+
+
+      <div className={classes.root}>
+        <Grid container spacing={2}>
+          <Grid item xs >
+            <Paper className={classes.paper}><Image fixed={image.fixed} alt="aaa" /></Paper>
+          </Grid>
+          <Grid item xs={8} >
+            <Paper className={classes.paper}> {documentToReactComponents(content.json, options)}</Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={8}>
-          <Paper className={classes.paper}> {documentToReactComponents(content.json, options)}</Paper>
-        </Grid>
-        </Grid>
-        </div>
+      </div>
 
 
 
     </Layout>
-    </Wrapper>
- )
+  </Wrapper>
+  )
 }
 
 export default About

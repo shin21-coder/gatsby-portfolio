@@ -6,6 +6,11 @@ import FolderIcon from '@material-ui/icons/Folder';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import HomeIcon from '@material-ui/icons/Home';
+import AccessibilityIcon from '@material-ui/icons/Accessibility';
+import PortraitIcon from '@material-ui/icons/Portrait';
+import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
   root: {
@@ -23,10 +28,13 @@ export default function LabelBottomNavigation() {
 
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
-      <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+      <Link to="/"><BottomNavigationAction label="Home" value="recents" icon={<HomeIcon/>} /></Link>
+      <Link to="/about"><BottomNavigationAction label="Aboutme" value="favorites" icon={<RestoreIcon />} /></Link>
+      <Link to="/portfolio"><BottomNavigationAction label="Portfolio" value="nearby" icon={<PortraitIcon />} /></Link>
+      <Link to="/contact"><BottomNavigationAction label="Contact" value="folder" icon={<PermContactCalendarIcon />} /></Link>
+      
+      
+      
     </BottomNavigation>
   );
 }

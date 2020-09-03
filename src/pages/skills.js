@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'rgba(255, 255, 255, 0.54)',
   },
   background: {
-    backgroundImage: `url(${Image})`,
+    // backgroundImage: `url(${Image})`gat,
     height: '300px',
     position:'relative'
   },
@@ -59,13 +59,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '50%',
     backgroundColor: 'white',
     textAlign: 'center',
-    lineHeight: '80px',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
-    color:'black'
   },
+
   subtitle: {
     fontSize: '2rem',
     borderBottom: 'dashed 1px #87CEFA ',
