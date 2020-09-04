@@ -29,7 +29,7 @@ export default function LabelBottomNavigation() {
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
       <Link to="/"><BottomNavigationAction label="Home" value="recents" icon={<HomeIcon/>} /></Link>
-      <Link to="/about"><BottomNavigationAction label="Aboutme" value="favorites" icon={<RestoreIcon />} /></Link>
+      <Link to="/about"><BottomNavigationAction label="Aboutme" value="favorites" icon={<AccessibilityIcon />} /></Link>
       <Link to="/portfolio"><BottomNavigationAction label="Portfolio" value="nearby" icon={<PortraitIcon />} /></Link>
       <Link to="/contact"><BottomNavigationAction label="Contact" value="folder" icon={<PermContactCalendarIcon />} /></Link>
       
