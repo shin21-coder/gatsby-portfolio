@@ -59,6 +59,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '50%',
     backgroundColor: 'white',
     textAlign: 'center',
+    lineHeight: '80px',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    color: 'black'
   },
 
   subtitle: {
