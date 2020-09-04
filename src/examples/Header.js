@@ -47,7 +47,9 @@ export default function SimpleMenu() {
     <div style={{
       backgroundImage: `url(${Image})`,
       height: '300px',
-      position:'relative'
+      position: 'relative',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize:'cover',
 
     }}>
 
