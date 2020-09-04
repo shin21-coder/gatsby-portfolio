@@ -10,6 +10,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import AccessibilityIcon from '@material-ui/icons/Accessibility';
 import PortraitIcon from '@material-ui/icons/Portrait';
 import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
@@ -31,7 +32,9 @@ export default function LabelBottomNavigation() {
       <Link to="/"><BottomNavigationAction label="Home" value="recents" icon={<HomeIcon/>} /></Link>
       <Link to="/about"><BottomNavigationAction label="Aboutme" value="favorites" icon={<AccessibilityIcon />} /></Link>
       <Link to="/portfolio"><BottomNavigationAction label="Portfolio" value="nearby" icon={<PortraitIcon />} /></Link>
+      <Link to="/skills"><BottomNavigationAction label="skills" value="nearby" icon={<AssignmentTurnedInIcon />} /></Link>
       <Link to="/contact"><BottomNavigationAction label="Contact" value="folder" icon={<PermContactCalendarIcon />} /></Link>
+      
       
       
       
