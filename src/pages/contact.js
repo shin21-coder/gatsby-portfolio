@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: '0 auto',
-    width: 500,
     textAlign: 'center'
     
   },
@@ -49,15 +48,25 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px auto',
     width:200
   },
-  label: {
-    width:500,
-  },
+
   form: {
     display: 'block',
-    margin:'0 auto'
+    margin: '0 auto',
+    height:30,
+  },
+  button: {
+    color: 'white',
+    marginTop: 30,
+    backgroundColor:'#333'
+  },
+  text: {
+    height: 140,
+    display: 'block',
+    margin: '0 auto',
   }
 
 }));
+
 
 export default function Contact() {
 
@@ -82,24 +91,24 @@ export default function Contact() {
           {/* ここまで */}
           {/* Netlifyでフォームの登録をするための記述 */}
           <div className="form-group">
-        <label className={classes.label}>お名前<abbr title="required"></abbr>
+        <label>お名前<abbr title="required"></abbr>
         <input type="text" className={classes.form} id="name" name="name" placeholder="名前" maxLength="30" minLength="2" required autoComplete="name" />
         </label>
       </div>
       <div className="form-group">
-        <label className={classes.label}>メールアドレス<abbr title="required"></abbr>
+        <label>メールアドレス<abbr title="required"></abbr>
               <input type="email" className={classes.form} id="email" name="email" placeholder="shin-bbb@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required autoComplete="email" />
   
         </label>
       </div>
       <div className="form-group">
-        <label className={classes.label}>お問い合わせ内容<abbr title="required"></abbr>
-        <textarea className={classes.form} id="contact" name="content" rows="8" required placeholder="ご自由にお書きください"></textarea>
+        <label>お問い合わせ内容<abbr title="required"></abbr>
+        <textarea className={classes.text} id="contact" name="content" rows="8" required placeholder="ご自由にお書きください"></textarea>
         </label>
       </div>
 
       <div className="form-group">
-      <button type="submit">送信</button>
+      <button type="submit" className={classes.button}>送信</button>
           </div>
           
         </form>

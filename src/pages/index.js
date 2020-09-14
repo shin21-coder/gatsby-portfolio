@@ -112,7 +112,6 @@ export default function ScrollableTabsButtonAuto() {
         </AppBar>
         <TabPanel value={value} index={0}>
           <div>爆速のページ遷移を、あなたのホームページに採用しませんか？</div>
-
           <Button variant="contained" color="secondary">
             <Link to="/contact" className={classes.button}>お問い合わせはコチラ</Link>
           </Button>
