@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
-  skilltheme:{
+  skilltheme: {
     color: 'white',
     position: 'absolute',
     top: '25%',
@@ -69,12 +69,12 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
-    color:'black'
+    color: 'black'
   },
   button: {
     display: 'block',
     color: 'white',
-    textDecoration:'none'
+    textDecoration: 'none'
   }
 }));
 
@@ -104,7 +104,7 @@ export default function ScrollableTabsButtonAuto() {
           >
 
             <Tab label="はじめに" {...a11yProps(0)} />
-            <Tab label="なんで爆速？"{...a11yProps(1)}  />
+            <Tab label="なんで爆速？"{...a11yProps(1)} />
             <Tab label="Gatsby.jsとは" {...a11yProps(2)} />
             <Tab label="他のメリットは？" {...a11yProps(3)} />
             <Tab label="このサイトについて" {...a11yProps(4)} />
@@ -112,18 +112,18 @@ export default function ScrollableTabsButtonAuto() {
         </AppBar>
         <TabPanel value={value} index={0}>
           <div>爆速のページ遷移を、あなたのホームページに採用しませんか？</div>
-          
+
           <Button variant="contained" color="secondary">
             <Link to="/contact" className={classes.button}>お問い合わせはコチラ</Link>
-      </Button>
-      </TabPanel>
+          </Button>
+        </TabPanel>
         <TabPanel value={value} index={1}>
           <p>Gatsby.jsという技術を使用しています。</p>
           <p>これを利用すると、WordPressやContentfulなどのCMSで得た情報を爆速で表示することが可能です。</p>
-          
-          
-          
-      </TabPanel>
+
+
+
+        </TabPanel>
         <TabPanel value={value} index={2}>
           <h3>Gatsby.jsとは</h3>
           <p>React.jsをベースにした静的サイトジェネレーターです。</p>
@@ -140,21 +140,21 @@ export default function ScrollableTabsButtonAuto() {
             <li>ユーザーにWebページを表示</li>
             <li>ここにボックスタイトルを入力</li>
           </ol>
-            
+
           <h4>静的サイトジェネレーターの場合</h4>
           <ol>
             <li>ユーザーがWebサイトにアクセスする</li>
             <li>ユーザーにWebページを表示</li>
           </ol>
-      </TabPanel>
+        </TabPanel>
         <TabPanel value={value} index={3}>
-        <h4>セキュリティが安全、サーバーレスのため、コストが抑えられる</h4>
+          <h4>セキュリティが安全、サーバーレスのため、コストが抑えられる</h4>
           <p>Gatsby.jsでWebページを表示する際は、データベースにアクセスする必要がありません。動的な処理が必要ないので、悪意のあるプログラムがデータベースに流し込まれる心配がないです。</p>
           <p>静的サイトジェネレーターで生成されたファイルはブラウザですべて解釈可能なため、ファイルの実行はブラウザにより行われるため、 効率がよく、高速にレスポンスを返すことができるというものです。これは、サーバーレスという仕組みですが、セキュリティリスクやサーバー管理コストが抑えられます。</p>
-      </TabPanel>
+        </TabPanel>
         <TabPanel value={value} index={4}>
-        <p>こちらのサイトはGatsby.js,Contentful,Netlifyを用いて構成されています。また、レイアウトやボタン、ヘッダーやフッターなどにmaterial-uiを使用しています。</p>
-      </TabPanel>
+          <p>こちらのサイトはGatsby.js,Contentful,Netlifyを用いて構成されています。また、レイアウトやボタン、ヘッダーやフッターなどにmaterial-uiを使用しています。</p>
+        </TabPanel>
       </div>
     </Layout>
 

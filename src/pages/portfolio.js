@@ -12,11 +12,15 @@ import { Link } from 'gatsby';
 import Image from 'gatsby-image'
 import ccccz from "../../static/ccccz.png"
 import tunagu from "../../static/tunagu.png"
+import isara from "../../static/isara-min.png"
+import norikoe from "../../static/norikoe-min.png"
+import semipure from "../../static/semipure-min.png"
 
 const useStyles = makeStyles({
   root: {
     // maxWidth: 345,
     display: 'flex',
+    flexWrap:'wrap',
     padding:0,
   },
   media: {
@@ -66,7 +70,7 @@ const Portfolio = ({ data }) => {
         <div className={classes.circle}>Portfolio</div>
       </div>
         <h3 className={classes.center}>Portfolio Lists</h3>
-       <Card className={classes.root}>
+      <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -79,7 +83,8 @@ const Portfolio = ({ data }) => {
             株式会社４C'z様
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            ヒアリング、既存のWordPressテーマのカスタマイズを行いました
+              ※製作途中<br></br>ヒアリング、既存のWordPressテーマのカスタマイズを行いました。
+              <a href="https://cccc-z.net/">サイトを見る</a>
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -97,7 +102,64 @@ const Portfolio = ({ data }) => {
             
           <Typography variant="body2" color="textSecondary" component="p">
               ※製作途中<br></br>
-              ヒアリング、既存のWordPressテーマのカスタマイズを行っています。予約システム等も取り入れています
+              ヒアリング、既存のWordPressテーマのカスタマイズを行っています。予約システム等も取り入れています。
+              <a href="https://wanchan21.xsrv.jp/">サイトを見る</a>
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={isara}
+            title="Contemplative Reptile"
+            style={{backgroundSize:"contain"}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+              isara模写
+          </Typography>
+            
+          <Typography variant="body2" color="textSecondary" component="p">
+              Isaraのホームページの模写です。Basic認証あり（ID,Passwordともに「wa」です。）
+              <a href="https://pt-programmer.com/isaracording/index.html">サイトを見る</a>
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={semipure}
+            title="Contemplative Reptile"
+            style={{backgroundSize:"contain"}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+              セミプレ様
+            
+          </Typography>
+            
+          <Typography variant="body2" color="textSecondary" component="p">
+              「セミプレ」という場所で配布されたデザインカンプをコーディングしたものです。（Design by JohnyWorks）　Basic認証あり（ID,Passwordともに「wa」です。）実案件ではありません。
+              <a href="https://pt-programmer.com/semipre_legal_1/">サイトを見る</a>
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={norikoe}
+            title="Contemplative Reptile"
+            style={{backgroundSize:"contain"}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+              挫折乗り越えサロン様
+          </Typography>
+            
+          <Typography variant="body2" color="textSecondary" component="p">
+              XDからのコーディングを練習させていただきました。実案件ではありません。
+              Basic認証あり（ID,Passwordともに「wa」です。）
+              <a href="https://pt-programmer.com/salon_lp/index.html">サイトを見る</a>
           </Typography>
         </CardContent>
       </CardActionArea>

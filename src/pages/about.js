@@ -51,12 +51,13 @@ const options = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
   },
   paper: {
     padding: theme.spacing(2),
     // textAlign: 'center',
     color: theme.palette.text.secondary,
+    width:'100%'
   },
   skilltheme: {
     color: 'white',
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%,-50%)',
     color: 'black'
   },
+  
 }));
 
 
@@ -103,10 +105,11 @@ const About = ({ data }) => {
 
       <div className={classes.root}>
         <Grid container spacing={2}>
+          {/* <Grid item xs >
+            <Paper className={classes.paper}></Paper>
+          </Grid> */}
+          <Image fixed={image.fixed} alt="自分" />
           <Grid item xs >
-            <Paper className={classes.paper}><Image fixed={image.fixed} alt="aaa" /></Paper>
-          </Grid>
-          <Grid item xs={8} >
             <Paper className={classes.paper}> {documentToReactComponents(content.json, options)}</Paper>
           </Grid>
         </Grid>

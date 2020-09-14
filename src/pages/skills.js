@@ -42,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
   background: {
     // backgroundImage: `url(${Image})`gat,
     height: '300px',
-    position:'relative'
+    position: 'relative'
   },
-  skilltheme:{
+  skilltheme: {
     color: 'white',
     position: 'absolute',
     top: '25%',
@@ -70,17 +70,17 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     fontSize: '2rem',
     borderBottom: 'dashed 1px #87CEFA ',
-    display:'inline-block',
+    display: 'inline-block',
   },
   awesome: {
-    fontSize:'5rem'
+    fontSize: '5rem'
   },
   skillbottom: {
-    marginBottom:10
+    marginBottom: 10
   },
   gatsby: {
     width: 100,
-    top:'30%'
+    top: '30%'
   }
 
 }));
@@ -96,8 +96,8 @@ export default function AutoGrid() {
           <Grid item xs>
             <div className={classes.skilltheme}>
               <div className={classes.circle}>skills</div>
-              </div>
-            
+            </div>
+
 
           </Grid>
         </Grid>
@@ -116,134 +116,134 @@ export default function AutoGrid() {
                   <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
                     <ListSubheader component="h3" className={classes.subtitle}>Skill Lists</ListSubheader>
                   </GridListTile>
-              
+
                   <GridListTile >
-                    
-                    
+
+
                     <FontAwesomeIcon icon={['fab', 'html5']} className={classes.awesome} style={{
-                      color:'#BD081C'
-                    }}/>
-                    
+                      color: '#BD081C'
+                    }} />
+
 
                     <GridListTileBar
-                        title='HTML'
+                      title='HTML'
                       subtitle={<span>デザインカンプからの忠実なコーディング</span>}
                       className={classes.skillbottom}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile >
-                    
-                    <FontAwesomeIcon icon={['fab','css3']} className={classes.awesome} style={{
-                      color:'#146EB4'
-                    }}/>
-                    
+                    />
+                  </GridListTile>
+                  <GridListTile >
+
+                    <FontAwesomeIcon icon={['fab', 'css3']} className={classes.awesome} style={{
+                      color: '#146EB4'
+                    }} />
+
 
                     <GridListTileBar
-                        title='CSS3'
+                      title='CSS3'
                       subtitle={<span>CSSを用いたアニメーション、デザイン</span>}
                       className={classes.skillbottom}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile>
-                    
-                    <FontAwesomeIcon icon={['fab','sass']} className={classes.awesome} style={{
+                    />
+                  </GridListTile>
+                  <GridListTile>
+
+                    <FontAwesomeIcon icon={['fab', 'sass']} className={classes.awesome} style={{
                       color: '#CD6799'
-                      
-                    }}/>
-                    
+
+                    }} />
+
 
                     <GridListTileBar
-                        title='Sass'
+                      title='Sass'
                       subtitle={<span>CSSを効率よく記述する技術</span>}
                       className={classes.skillbottom}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile>
-                    
-                    <FontAwesomeIcon icon={['fab','wordpress']} className={classes.awesome} style={{
-                      color:'#21759B'
-                    }}/>
-                    
+                    />
+                  </GridListTile>
+                  <GridListTile>
+
+                    <FontAwesomeIcon icon={['fab', 'wordpress']} className={classes.awesome} style={{
+                      color: '#21759B'
+                    }} />
+
 
                     <GridListTileBar
-                        title='WordPress'
+                      title='WordPress'
                       subtitle={<span>WordPressを用いたテーマ開発、デザイン修正</span>}
                       className={classes.skillbottom}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile>
-                    
-                    <FontAwesomeIcon icon={['fab','github']} className={classes.awesome} style={{
-                      color:'black'
-                    }}/>
-                    
+                    />
+                  </GridListTile>
+                  <GridListTile>
+
+                    <FontAwesomeIcon icon={['fab', 'github']} className={classes.awesome} style={{
+                      color: 'black'
+                    }} />
+
 
                     <GridListTileBar
-                        title='GitHub'
+                      title='GitHub'
                       subtitle={<span>Git,GitHubを使用したコード管理</span>}
                       className={classes.skillbottom}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile>
-                    
-                    <FontAwesomeIcon icon={['fab','js']} className={classes.awesome} style={{
-                      color:'#F4B400'
-                    }}/>
-                    
+                    />
+                  </GridListTile>
+                  <GridListTile>
+
+                    <FontAwesomeIcon icon={['fab', 'js']} className={classes.awesome} style={{
+                      color: '#F4B400'
+                    }} />
+
 
                     <GridListTileBar
-                        title='JavaScript'
+                      title='JavaScript'
                       subtitle={<span>スライドショー等の動きのあるデザイン</span>}
                       className={classes.skillbottom}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile>
-                    
+                    />
+                  </GridListTile>
+                  <GridListTile>
+
                     <FontAwesomeIcon icon={['fab', 'react']} className={classes.awesome} style={{
                       color: '#61DAFB'
-                      
-                    }}/>
 
-                    
-                    
+                    }} />
+
+
+
 
                     <GridListTileBar
-                        title='React(Gatsby.js)'
+                      title='React(Gatsby.js)'
                       subtitle={<span>JavaScriptのライブラリの1つReact</span>}
 
 
-                      />
-                    </GridListTile>
-                    <GridListTile>
-                    
+                    />
+                  </GridListTile>
+                  <GridListTile>
+
                     <img src={logo} className={classes.gatsby} />
 
 
 
-                    
-                    
+
+
 
                     <GridListTileBar
-                        title='React(Gatsby.js)'
+                      title='React(Gatsby.js)'
                       subtitle={<span>Reactのフレームワークの一つ、Gatsby.jsを用いたWeb制作<br></br>
                       このサイトはGatsby.js,Contentful,Netlifyを使用して作成</span>}
 
 
-                      />
-                    </GridListTile>
-                
+                    />
+                  </GridListTile>
+
                 </GridList>
               </div>
 
