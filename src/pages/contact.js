@@ -8,10 +8,10 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > *': {
-      margin: theme.spacing(1),
-
-    },
+    margin: '0 auto',
+    width: 500,
+    textAlign: 'center'
+    
   },
   skilltheme: {
     color: 'white',
@@ -49,6 +49,14 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px auto',
     width:200
   },
+  label: {
+    width:500,
+  },
+  form: {
+    display: 'block',
+    margin:'0 auto'
+  }
+
 }));
 
 export default function Contact() {
@@ -73,13 +81,27 @@ export default function Contact() {
           <input type="hidden" name="form-name" value="testing-contact" />
           {/* ここまで */}
           {/* Netlifyでフォームの登録をするための記述 */}
-          <TextField id="standard-basic" label="名前" className={classes.block} />
-          <TextField id="filled-basic" label="メールアドレス" variant="filled" className={classes.block} />
-          <TextField id="standard-full-width" label="お問い合わせ内容" variant="outlined" className={classes.block} fullWidth margin="normal" multiline rows={4} />
+          <div className="form-group">
+        <label className={classes.label}>お名前<abbr title="required"></abbr>
+        <input type="text" className={classes.form} id="name" name="name" placeholder="名前" maxLength="30" minLength="2" required autoComplete="name" />
+        </label>
+      </div>
+      <div className="form-group">
+        <label className={classes.label}>メールアドレス<abbr title="required"></abbr>
+              <input type="email" className={classes.form} id="email" name="email" placeholder="shin-bbb@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required autoComplete="email" />
+  
+        </label>
+      </div>
+      <div className="form-group">
+        <label className={classes.label}>お問い合わせ内容<abbr title="required"></abbr>
+        <textarea className={classes.form} id="contact" name="content" rows="8" required placeholder="ご自由にお書きください"></textarea>
+        </label>
+      </div>
+
+      <div className="form-group">
+      <button type="submit">送信</button>
+          </div>
           
-          <Button variant="contained" color="primary" type="submit">
-            submit
-      </Button>
         </form>
       </div>
     </section>
