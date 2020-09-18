@@ -8,14 +8,13 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Tutorial",
-    description: "some random description",
-    author: "@johndoe",
-    data: ["item 1", "item 2"],
-    person: { name: "peter", age: 32 },
+    title: "Portfolio",
+    description: "myPortfolio",
+    author: "@shingohorikawa",
   },
 
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,

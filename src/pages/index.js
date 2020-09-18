@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Layout from "../components/layout";
 import Button from '@material-ui/core/Button';
+import SEO from '../components/SEO'
 import { Link } from 'gatsby';
 
 function TabPanel(props) {
@@ -88,6 +89,8 @@ export default function ScrollableTabsButtonAuto() {
 
   return (
     <Layout>
+      <SEO />
+
       <div className={classes.skilltheme}>
         <div className={classes.circle}>Home</div>
       </div>
