@@ -36,7 +36,8 @@ const options = {
       } else if ((node.data.uri).includes("youtube.com/embed")) {
         return <IframeContainer><iframe title="Unique Title 002" src={node.data.uri} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowFullScreen></iframe></IframeContainer>
       } else {
-        return <a href="https://twitter.com/leading5412">(twitter)</a>
+        return
+        // <a href="https://twitter.com/leading5412">(twitter)</a>
 
       }
     }
