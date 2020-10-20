@@ -15,6 +15,8 @@ import tunagu from "../../static/tunagu.png"
 import isara from "../../static/isara-min.png"
 import norikoe from "../../static/norikoe-min.png"
 import semipure from "../../static/semipure-min.png"
+import lpccccz from "../../static/lpccccz.png"
+import scrums from "../../static/scrums.png"
 
 const useStyles = makeStyles({
   root: {
@@ -160,6 +162,43 @@ const Portfolio = ({ data }) => {
               XDからのコーディングを練習させていただきました。実案件ではありません。
               Basic認証あり（ID,Passwordともに「wa」です。）
               <a href="https://pt-programmer.com/salon_lp/index.html">サイトを見る</a>
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={scrums}
+            title="Contemplative Reptile"
+            style={{backgroundSize:"contain"}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+              SCRUMS様
+          </Typography>
+            
+          <Typography variant="body2" color="textSecondary" component="p">
+              オンラインサロンの案件でXDからのコーディングを行いました。実案件です。
+              Basic認証あり（ID,Passwordともに「wa」です。）
+              <a href="http://pt-programmer.com/salon/index.html">サイトを見る</a>
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image={lpccccz}
+            title="Contemplative Reptile"
+            style={{backgroundSize:"contain"}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+              株式会社4C'z様
+          </Typography>
+            
+          <Typography variant="body2" color="textSecondary" component="p">
+              既存のLP専用のWordPressテーマを用いてカスタマイズしました。実案件です。
+              <a href="http://lp.cccc-z.net/">サイトを見る</a>
           </Typography>
         </CardContent>
       </CardActionArea>
